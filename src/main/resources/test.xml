@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="welcome" class="org.example.Welcome" scope="prototype">
+        <property name="hello" value="Hi man!"/>
+    </bean>
+    <bean id="greetings" class="org.example.Greetings" scope="prototype">
+        <property name="welcome" ref="welcome"/>
+    </bean>
+</beans>
